@@ -119,32 +119,34 @@ export default class Touchables extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableHighlight onPress={this._onPressButton} underlayColor="white">
-          <View style={styles.button}>
+        <TouchableHighlight  style={styles.button} onPress={this._onPressButton} underlayColor="white">
+          <View>
             <Text style={styles.buttonText}>TouchableHighlight</Text>
           </View>
         </TouchableHighlight>
-        <TouchableOpacity onPress={this._onPressButton}>
-          <View style={styles.button}>
+        <TouchableOpacity  style={styles.button} onPress={this._onPressButton}>
+          <View>
             <Text style={styles.buttonText}>TouchableOpacity</Text>
           </View>
         </TouchableOpacity>
         <TouchableNativeFeedback
+            style={styles.button}
             onPress={this._onPressButton}
             background={Platform.OS === 'android' ? TouchableNativeFeedback.SelectableBackground() : ''}>
-          <View style={styles.button}>
+          <View>
             <Text style={styles.buttonText}>TouchableNativeFeedback</Text>
           </View>
         </TouchableNativeFeedback>
         <TouchableWithoutFeedback
+            style={styles.button}
             onPress={this._onPressButton}
             >
-          <View style={styles.button}>
+          <View>
             <Text style={styles.buttonText}>TouchableWithoutFeedback</Text>
           </View>
         </TouchableWithoutFeedback>
-        <TouchableHighlight onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
-          <View style={styles.button}>
+        <TouchableHighlight  style={styles.button} onPress={this._onPressButton} onLongPress={this._onLongPressButton} underlayColor="white">
+          <View>
             <Text style={styles.buttonText}>Touchable with Long Press</Text>
           </View>
         </TouchableHighlight>
